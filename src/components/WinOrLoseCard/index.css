@@ -1,72 +1,63 @@
-/* Write your code here. */
-.winOrLose-container {
+.win-or-lose-card {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #ffffff33;
-  width: 80%;
+  width: 85%;
   border: 3px solid #ffffff30;
-  border-radius: 18px;
+  border-radius: 24px;
+  margin: auto;
+  padding: 16px;
 }
 
-@media screen and (max-width: 540px) {
-  .winOrLose-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px 20px 10px;
+@media screen and (min-width: 768px) {
+  .win-or-lose-card {
+    width: 80%;
+    padding: 32px;
   }
 }
 
-@media screen and (min-width: 541px) {
-  .winOrLose-container {
-    display: flex;
+@media screen and (min-width: 992px) {
+  .win-or-lose-card {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px 20px 70px;
+    width: 70%;
   }
 }
 
-/*win or lose text container and we also set the order of images as they change
- for different width of screens */
-.winOrLose-text-container {
+@media screen and (min-width: 1200px) {
+  .win-or-lose-card {
+    width: 60%;
+  }
+}
+
+.details-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  order: 0;
-}
-.winOrLose-image-container {
   order: 1;
 }
-@media screen and (max-width: 540px) {
-  .winOrLose-text-container {
-    order: 1;
-  }
-}
 
-@media screen and (max-width: 540px) {
-  .winOrLose-image-container {
+@media screen and (min-width: 992px) {
+  .details-section {
     order: 0;
   }
 }
 
-/* heading text whether won or lose text {game status}*/
-.winOrLose-status {
+.game-status {
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 0px;
 }
-@media screen and (min-width: 768px) {
-  .winOrLose-status {
-    font-size: 43px;
+
+@media screen and (min-width: 992px) {
+  .game-status {
+    font-size: 64px;
   }
 }
 
-/* to display best score or just a normal score depending upon logic {score-label}*/
-.winOrLose-label {
+.current-score-label {
   text-align: center;
   color: #ffffff;
   font-family: 'Roboto';
@@ -74,14 +65,14 @@
   font-weight: bold;
   margin: 0px;
 }
+
 @media screen and (min-width: 992px) {
-  .winOrLose-label {
+  .current-score-label {
     font-size: 36px;
   }
 }
 
-/*get the current score {score}{*/
-.winOrLose-current-score {
+.current-score-value {
   text-align: center;
   color: #6a59ff;
   font-family: 'Roboto';
@@ -89,14 +80,14 @@
   font-weight: bold;
   margin: 0px;
 }
+
 @media screen and (min-width: 768px) {
-  .winOrLose-current-score {
+  .current-score-value {
     font-size: 48px;
   }
 }
 
-/*play again button */
-.winOrLose-button {
+.play-again-button {
   color: #3d3d3d;
   background-color: #ffce27;
   font-family: 'Roboto';
@@ -112,7 +103,18 @@
   outline: none;
 }
 
-/*image */
+.image-section {
+  display: flex;
+  justify-content: center;
+  order: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .image-section {
+    order: 1;
+  }
+}
+
 .win-or-lose-image {
   width: 150px;
   height: 200px;
@@ -120,7 +122,7 @@
 
 @media screen and (min-width: 992px) {
   .win-or-lose-image {
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
   }
 }

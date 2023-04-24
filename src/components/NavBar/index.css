@@ -1,96 +1,60 @@
-/* Write your code here. */
-.navbar-container {
-  width: 100%;
+.nav-bar-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
+  justify-content: center;
   background-color: #ffffff33;
-}
-@media screen and (max-width: 540px) {
-  .navbar-container {
-    padding: 10px 20px 10px 20px;
-  }
-}
-@media screen and (min-width: 760px) {
-  .navbar-container {
-    padding: 15px 50px 15px 50px;
-  }
+  padding: 8px;
 }
 
-/* logo and website title container */
-.logo-title-container {
+.title-with-score-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 80%;
+  max-width: 1000px;
+}
+
+.logo-and-title-container {
+  display: flex;
   align-items: center;
 }
-/*logo image */
-.logo-image {
-  margin-right: 20px;
+
+.emoji-logo {
+  width: 24px;
 }
-@media screen and (max-width: 540px) {
-  .logo-image {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+
+@media screen and (min-width: 768px) {
+  .emoji-logo {
+    width: 48px;
   }
 }
 
-.logo-title {
-  font-size: 18px;
-  font-weight: 600;
-  font-family: 'Roboto';
+.title {
   color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: bold;
 }
 
-@media screen and (max-width: 540px;) {
-  .logo-title {
-    font-size: 16px;
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
   }
 }
-/* score card container*/
-.Score-container {
+
+.scores-container {
   display: flex;
-  flex-direction: row;
 }
-@media screen and (max-width: 540px) {
-  .Score-container {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.score-label {
-  font-family: 'Roboto';
-  font-weight: 600;
+
+.score {
   color: #ffffff;
-  font-size: 18px;
-  padding: 5px;
-}
-@media screen and (max-width: 540px) {
-  .score-label {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 760px) {
-  .score-label {
-    padding-left: 30px;
-  }
-}
-
-/*scores */
-.score-value {
   font-family: 'Roboto';
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 16px;
 }
 
-@media screen and (max-width: 540px) {
-  .score-value {
-    font-size: 16px;
+@media screen and (min-width: 768px) {
+  .score {
+    font-size: 24px;
+    margin-left: 32px;
   }
 }

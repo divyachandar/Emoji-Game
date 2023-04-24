@@ -1,39 +1,28 @@
-// Write your code here.
 import './index.css'
-import {Component} from 'react'
 
-class NavBar extends Component {
-  renderScores = () => {
-    const {currentScore, topScore, isGameOver} = this.props
-    if (isGameOver) {
-      return null
-    }
-    return (
-      <div className="score-container">
-        <p className="score-label">
-          Score:<span className="score-value">{currentScore}</span>
-        </p>
-        <p className="score-label">
-          Total Score:<span className="score-value">{topScore}</span>
-        </p>
-      </div>
-    )
-  }
+const NavBar = props => {
+  const {currentScore, isGameInProgress, topScore} = props
 
-  render() {
-    return (
-      <div className="navbar-container">
-        <div className="logo-title-container">
+  return (
+    <nav className="nav-bar-container">
+      <div className="title-with-score-container">
+        <div className="logo-and-title-container">
           <img
-            className="logo-image"
+            className="emoji-logo"
             src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
             alt="emoji logo"
           />
-          <p className="logo-title">Emoji Game</p>
+          <h1 className="title">Emoji Game</h1>
         </div>
-        {this.renderScores()}
+        {isGameInProgress && (
+          <div className="scores-container">
+            <p className="score">Score: {currentScore}</p>
+            <p className="score">Top Score: {topScore}</p>
+          </div>
+        )}
       </div>
-    )
-  }
+    </nav>
+  )
 }
+
 export default NavBar
